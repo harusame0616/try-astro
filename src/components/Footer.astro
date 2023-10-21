@@ -1,6 +1,13 @@
 ---
+import Social from "./Social.astro";
+
 const platform = "github";
 const username = "harusame0616";
+
+const socials = [
+  { platform: "twitter", username: "harusame0616" },
+  { platform: "github", username: "harusame0616" },
+];
 ---
 
 <footer>
@@ -9,4 +16,5 @@ const username = "harusame0616";
       href={`https://www.${platform}.com/${username}`}>{platform}</a
     >をご確認ください！
   </p>
+  {socials.map((social) => <Social {...social} />)}
 </footer>
