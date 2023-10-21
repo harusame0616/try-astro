@@ -10,11 +10,14 @@ const socials = [
 ];
 ---
 
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+
 <footer>
-  <p>
-    私のプロジェクトについて詳しくは<a
-      href={`https://www.${platform}.com/${username}`}>{platform}</a
-    >をご確認ください！
-  </p>
   {socials.map((social) => <Social {...social} />)}
 </footer>
